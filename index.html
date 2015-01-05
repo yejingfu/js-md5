@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Js-md5 : A simple MD5 hash function for JavaScript supports UTF-8 encoding.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Js-md5</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/emn178/js-md5">View on GitHub</a>
+
+          <h1 id="project_title">Js-md5</h1>
+          <h2 id="project_tagline">A simple MD5 hash function for JavaScript supports UTF-8 encoding.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/emn178/js-md5/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/emn178/js-md5/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="js-md5" class="anchor" href="#js-md5" aria-hidden="true"><span class="octicon octicon-link"></span></a>js-md5</h1>
+
+<p>A simple MD5 hash function for JavaScript supports UTF-8 encoding.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p>For node.js, you can use this command to install:</p>
+
+<pre><code>npm install js-md5
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>If you use node.js, you should require the module first:</p>
+
+<div class="highlight highlight-JavaScript"><pre>md5 <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>js-md5<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>And you could use like this:</p>
+
+<div class="highlight highlight-JavaScript"><pre>md5(<span class="pl-s1"><span class="pl-pds">'</span>Message to hash<span class="pl-pds">'</span></span>);</pre></div>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre>md5(<span class="pl-s1"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>);
+md5(<span class="pl-s1"><span class="pl-pds">'</span>The quick brown fox jumps over the lazy dog<span class="pl-pds">'</span></span>);
+md5(<span class="pl-s1"><span class="pl-pds">'</span>The quick brown fox jumps over the lazy dog.<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>Output</p>
+
+<pre><code>d41d8cd98f00b204e9800998ecf8427e
+9e107d9d372bb6826bd81d3542a419d6
+e4d909c290d0fb1ca068ffaddf22cbd0
+</code></pre>
+
+<p>It also supports UTF-8 encoding:</p>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre>md5(<span class="pl-s1"><span class="pl-pds">'</span>中文<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>Output</p>
+
+<pre><code>a7bac2239fcdcb3a067903d8077c4a07
+</code></pre>
+
+<h2>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests</h2>
+
+<p>You can open <code>tests/index.html</code> in browser or use node.js to run test</p>
+
+<pre><code>node tests/node-test.js
+</code></pre>
+
+<p>or</p>
+
+<pre><code>npm test
+</code></pre>
+
+<h2>
+<a id="extensions" class="anchor" href="#extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extensions</h2>
+
+<h3>
+<a id="jquery" class="anchor" href="#jquery" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQuery</h3>
+
+<p>If you prefer jQuery style, you can add following code to add a jQuery extension.</p>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre>jQuery.md5 <span class="pl-k">=</span> md5</pre></div>
+
+<p>And then you could use like this:</p>
+
+<div class="highlight highlight-JavaScript"><pre>$.md5(<span class="pl-s1"><span class="pl-pds">'</span>message<span class="pl-pds">'</span></span>);</pre></div>
+
+<h3>
+<a id="prototype" class="anchor" href="#prototype" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prototype</h3>
+
+<p>If you prefer prototype style, you can add following code to add a prototype extension.</p>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre><span class="pl-s3">String</span>.<span class="pl-sc">prototype</span>.<span class="pl-en">md5</span> <span class="pl-k">=</span> <span class="pl-st">function</span>() {
+  <span class="pl-k">return</span> md5(<span class="pl-v">this</span>);
+};</pre></div>
+
+<p>And then you could use like this:</p>
+
+<div class="highlight highlight-JavaScript"><pre><span class="pl-s1"><span class="pl-pds">'</span>message<span class="pl-pds">'</span></span>.md5();</pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The project is released under the <a href="http://www.opensource.org/licenses/MIT">MIT license</a>.</p>
+
+<h2>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h2>
+
+<p>The project's website is located at <a href="https://github.com/emn178/js-md5">https://github.com/emn178/js-md5</a><br>
+Author: <a href="mailto:emn178@gmail.com">emn178@gmail.com</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Js-md5 maintained by <a href="https://github.com/emn178">emn178</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-44208259-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
